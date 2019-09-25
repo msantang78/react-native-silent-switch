@@ -1,5 +1,10 @@
 #import "RCTSilentSwitch.h"
-#import "RCTEventDispatcher.h"
+#if __has_include(<React/RCTEventDispatcher.h>)
+  #import <React/RCTEventDispatcher.h>
+#else
+  #import "RCTEventDispatcher.h"
+#endif
+
 
 @implementation RCTSilentSwitch
 
